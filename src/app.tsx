@@ -1,3 +1,5 @@
+import {useCallback, useEffect, useState} from "react";
+
 type WallProps = {
   className: string;
   start: [number, number]
@@ -50,19 +52,111 @@ function YandexTV50() {
   />
 }
 
-const W1=80
+function QBed() {
+  return <RectPath
+    className="q-bed"
+    start={[-1920/2, 0]}
+    lens={[1920, 2160, -1920, -2160]}
+  />
+}
+
+const W1=80;
+const SB = {
+  minx: -300,
+  width: 15000,
+  miny: -300,
+  height: 12000,
+};
+
+function RulerText({d, href}: {d: number, href: string}) {
+  return <text>
+    <textPath
+      href={href}
+      startOffset="50%"
+      className="ruler-text"
+    >
+      {Math.abs(d).toFixed(0)}
+    </textPath>
+  </text>;
+}
+
+type RulerData = {
+  from: [number, number];
+  to: [number, number];
+};
+
+function Ruler({from, to}: RulerData) {
+  const [x0, y0] = from;
+  const [x1, y1] = to;
+  const dx = x1 - x0;
+  const dy = y1 - y0;
+  const d = Math.sqrt(dx*dx + dy*dy);
+  return <g className="ruler">
+    <circle cx={x0} cy={y0} r={50} />
+    <path id="ruler-diag" className="ruler" d={`M${from.join(',')} L${to.join(',')}`} />
+    <RulerText href="#ruler-diag" d={d} />
+    <path id="ruler-top" className="ruler-top" d={`M${x0},${y0} L${x1},${y0}`} />
+    <path id="ruler-bot" className="ruler-bot" d={`M${x0},${y1} L${x1},${y1}`} />
+    <path id="ruler-right" className="ruler-top" d={`M${x1},${y0} L${x1},${y1}`} />
+    <path id="ruler-left" className="ruler-left" d={`M${x0},${y0} L${x0},${y1}`} />
+    <RulerText href="#ruler-top" d={dx} />
+    <RulerText href="#ruler-right" d={dy} />
+    <circle cx={x1} cy={y1} r={50} />
+  </g>
+}
 
 export function Apt() {
+  const [down, setDown] = useState<[number, number] | null>(null);
+  const [ruler, setRuler] = useState<RulerData | null>(null);
+  const [svg, setSvg] = useState<SVGSVGElement | null>(null);
+
+  const onDown = useCallback((e) => {
+    setDown([e.clientX, e.clientY]);
+    setRuler(null);
+  }, []);
+
+  const toSVGxy = useCallback(([x, y]: [number, number]): [number, number] => {
+    if (!svg) return [0, 0];
+    const {left, top, width, height} = svg.getBoundingClientRect();
+    return [
+      (x - left) / width * SB.width + SB.minx,
+      (y - top) / height * SB.height + SB.miny,
+    ]
+  }, [svg]);
+
+  useEffect(() => {
+    if (!down) return;
+    const up = () => {
+      setDown(null);
+    }
+    const move = (e: MouseEvent) => {
+      setRuler({from: toSVGxy(down), to: toSVGxy([e.clientX, e.clientY])});
+    }
+    document.addEventListener('mousemove', move);
+    document.addEventListener('mouseup', up);
+
+    return () => {
+      document.removeEventListener('mousemove', move);
+      document.removeEventListener('mouseup', up);
+    }
+  }, [down, toSVGxy]);
+
+  useEffect(() => {
+    console.log(ruler?.from, ruler?.to);
+  }, [ruler]);
+
   return (
+    <div className="plan">
     <svg
       version="1.1"
       baseProfile="full"
-      width="80%"
-      className="plan"
-      viewBox="-300 -300 15000 15000"
+      viewBox={`${SB.minx} ${SB.miny} ${SB.width} ${SB.height}`}
       xmlns="http://www.w3.org/2000/svg"
+      onClick={(e) => console.log(e)}
+      onMouseDown={onDown}
+      ref={setSvg}
     >
-      <g className="room">
+      <Place className="room" key="living">
         <RectPath
           className="room-floor"
           start={[0,268]}
@@ -121,8 +215,9 @@ export function Apt() {
             300, 176, -300, -176,
           ]}
         />
-      </g>
-      <g className="room" transform={`translate(${5175 + W1},0)`}>
+      </Place>
+
+      <Place key="study" className="room" x={5175 + W1}>
         <RectPath
           className="room-floor"
           start={[0, 0]}
@@ -174,8 +269,9 @@ export function Apt() {
         <Place x={3655 - 2427/2 + 800} y={3030 - 500} deg={-30}>
           <Spkr30 />
         </Place>
-      </g>
-      <g className="room" transform={`translate(${5175+W1+3655+W1},0)`}>
+      </Place>
+
+      <Place key="kitchen" className="room" x={5175+W1+3655+W1}>
         <RectPath
           className="room-floor"
           start={[160, 0]}
@@ -207,8 +303,9 @@ export function Apt() {
             -300-689, 300,
           ]}
         />
-      </g>
-      <g className="room" transform={`translate(0,${3626+W1})`}>
+      </Place>
+
+      <Place key="children" className="room" y={3626+W1}>
         <RectPath
           className="room-floor"
           start={[0, 0]}
@@ -239,8 +336,9 @@ export function Apt() {
             -W1-3610-300, -W1-160-412,
           ]}
         />
-      </g>
-      <g className="room" transform={`translate(0,${3626+W1+3252+W1})`}>
+      </Place>
+
+      <Place key="bedroom" className="room" y={3626+W1+3252+W1}>
         <RectPath
           className="room-floor"
           start={[0, 0]}
@@ -288,8 +386,12 @@ export function Apt() {
             -300, -183,
           ]}
         />
-      </g>
-      <g className="room" transform={`translate(${3786+800+150},${3626+W1+3252+W1})`}>
+        <Place x={3786/2} y={0}>
+          <QBed />
+        </Place>
+      </Place>
+
+      <Place key="bedroom-closet" className="room" x={3786+800+150} y={3626+W1+3252+W1}>
         <RectPath
           className="room-floor"
           start={[W1, 0]}
@@ -317,8 +419,9 @@ export function Apt() {
             W1, -600,
           ]}
         />
-      </g>
-      <Place className="room" x={5175+W1+3655+W1} y={6308+W1}>
+      </Place>
+
+      <Place key="entrance-closet" className="room" x={5175+W1+3655+W1} y={6308+W1}>
         <RectPath
           className="room-floor"
           start={[0, 0]}
@@ -346,7 +449,10 @@ export function Apt() {
           ]}
         />
       </Place>
+
+      {ruler && <Ruler {...ruler} />}
     </svg>
+    </div>
   );
 }
 

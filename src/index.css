@@ -1,6 +1,7 @@
 .plan {
-  width: 100wh;
-  height: 100wh;
+  width: 80vw;
+  cursor: crosshair;
+  /* height: 80vw; */
 }
 .room-floor {
   stroke: none;
@@ -10,8 +11,21 @@
   stroke: none;
   fill: #444;
 }
+.q-bed {
+  fill: #EBACCA;
+}
 .markus {
   fill: #222;
   stroke: #CCC;
   stroke-width: 100;
+}
+
+.ruler {
+  fill: none;
+  stroke-width: 10;
+  stroke: red;
+}
+.ruler-text {
+  font: 100px sans-serif;
+  stroke: #888;
 }
