@@ -24551,6 +24551,8 @@ parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "Apt", ()=>Apt);
 parcelHelpers.export(exports, "App", ()=>App);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _react = require("react");
+var _s = $RefreshSig$();
 function RectPath({ start: [sx, sy] , lens , className  }) {
     let d = `M${sx},${sy}`;
     for(let i = 0; i < lens.length; i += 2){
@@ -24563,7 +24565,7 @@ function RectPath({ start: [sx, sy] , lens , className  }) {
         d: d
     }, void 0, false, {
         fileName: "src/app.tsx",
-        lineNumber: 14,
+        lineNumber: 16,
         columnNumber: 10
     }, this);
 }
@@ -24575,7 +24577,7 @@ function Place({ className , x =0 , y =0 , deg =0 , children  }) {
         children: children
     }, void 0, false, {
         fileName: "src/app.tsx",
-        lineNumber: 26,
+        lineNumber: 28,
         columnNumber: 10
     }, this);
 }
@@ -24595,7 +24597,7 @@ function Fredde() {
         ]
     }, void 0, false, {
         fileName: "src/app.tsx",
-        lineNumber: 35,
+        lineNumber: 37,
         columnNumber: 10
     }, this);
 }
@@ -24615,7 +24617,7 @@ function Spkr30() {
         ]
     }, void 0, false, {
         fileName: "src/app.tsx",
-        lineNumber: 39,
+        lineNumber: 41,
         columnNumber: 10
     }, this);
 }
@@ -24628,7 +24630,7 @@ function Markus() {
         r: 500
     }, void 0, false, {
         fileName: "src/app.tsx",
-        lineNumber: 43,
+        lineNumber: 45,
         columnNumber: 10
     }, this);
 }
@@ -24639,730 +24641,965 @@ function YandexTV50() {
         d: `M${-555.5},${0}l1111,0 l0,284 l-1111,0 l0,-284`
     }, void 0, false, {
         fileName: "src/app.tsx",
-        lineNumber: 47,
+        lineNumber: 49,
         columnNumber: 10
     }, this);
 }
 _c5 = YandexTV50;
+function QBed() {
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(RectPath, {
+        className: "q-bed",
+        start: [
+            -960,
+            0
+        ],
+        lens: [
+            1920,
+            2160,
+            -1920,
+            -2160
+        ]
+    }, void 0, false, {
+        fileName: "src/app.tsx",
+        lineNumber: 56,
+        columnNumber: 10
+    }, this);
+}
+_c6 = QBed;
 const W1 = 80;
-function Apt() {
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("svg", {
-        version: "1.1",
-        baseProfile: "full",
-        width: "80%",
-        className: "plan",
-        viewBox: "-300 -300 15000 15000",
-        xmlns: "http://www.w3.org/2000/svg",
+const SB = {
+    minx: -300,
+    width: 15000,
+    miny: -300,
+    height: 12000
+};
+function RulerText({ d , href  }) {
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("text", {
+        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("textPath", {
+            href: href,
+            startOffset: "50%",
+            className: "ruler-text",
+            children: Math.abs(d).toFixed(0)
+        }, void 0, false, {
+            fileName: "src/app.tsx",
+            lineNumber: 73,
+            columnNumber: 5
+        }, this)
+    }, void 0, false, {
+        fileName: "src/app.tsx",
+        lineNumber: 72,
+        columnNumber: 10
+    }, this);
+}
+_c7 = RulerText;
+function Ruler({ from , to  }) {
+    const [x0, y0] = from;
+    const [x1, y1] = to;
+    const dx = x1 - x0;
+    const dy = y1 - y0;
+    const d = Math.sqrt(dx * dx + dy * dy);
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("g", {
+        className: "ruler",
         children: [
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("g", {
-                className: "room",
-                children: [
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(RectPath, {
-                        className: "room-floor",
-                        start: [
-                            0,
-                            268
-                        ],
-                        lens: [
-                            1840,
-                            -268,
-                            3180,
-                            1531,
-                            155,
-                            1500,
-                            -1573,
-                            596,
-                            -3614,
-                            -3358, 
-                        ]
-                    }, void 0, false, {
-                        fileName: "src/app.tsx",
-                        lineNumber: 66,
-                        columnNumber: 9
-                    }, this),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(RectPath, {
-                        className: "room-wall",
-                        start: [
-                            0,
-                            268
-                        ],
-                        lens: [
-                            1840,
-                            -268,
-                            840,
-                            -300,
-                            -2980,
-                            1161,
-                            300,
-                            593, 
-                        ]
-                    }, void 0, false, {
-                        fileName: "src/app.tsx",
-                        lineNumber: 77,
-                        columnNumber: 9
-                    }, this),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(RectPath, {
-                        className: "room-wall",
-                        start: [
-                            4603,
-                            -300
-                        ],
-                        lens: [
-                            572 + W1,
-                            3331,
-                            -W1,
-                            -1500,
-                            -155,
-                            -1531,
-                            -417,
-                            -300, 
-                        ]
-                    }, void 0, false, {
-                        fileName: "src/app.tsx",
-                        lineNumber: 87,
-                        columnNumber: 9
-                    }, this),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(RectPath, {
-                        className: "room-wall",
-                        start: [
-                            5175,
-                            3030
-                        ],
-                        lens: [
-                            W1,
-                            W1,
-                            -W1 - 319,
-                            -W1,
-                            319,
-                            0, 
-                        ]
-                    }, void 0, false, {
-                        fileName: "src/app.tsx",
-                        lineNumber: 97,
-                        columnNumber: 9
-                    }, this),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(RectPath, {
-                        className: "room-wall",
-                        start: [
-                            -300,
-                            2784
-                        ],
-                        lens: [
-                            300,
-                            842,
-                            3610,
-                            -596,
-                            450,
-                            W1,
-                            -450 + W1,
-                            596,
-                            -W1 - 3610 - 300,
-                            -842, 
-                        ]
-                    }, void 0, false, {
-                        fileName: "src/app.tsx",
-                        lineNumber: 106,
-                        columnNumber: 9
-                    }, this),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(RectPath, {
-                        className: "room-wall",
-                        start: [
-                            -300,
-                            1885
-                        ],
-                        lens: [
-                            300,
-                            176,
-                            -300,
-                            -176, 
-                        ]
-                    }, void 0, false, {
-                        fileName: "src/app.tsx",
-                        lineNumber: 117,
-                        columnNumber: 9
-                    }, this)
-                ]
-            }, void 0, true, {
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("circle", {
+                cx: x0,
+                cy: y0,
+                r: 50
+            }, void 0, false, {
                 fileName: "src/app.tsx",
-                lineNumber: 65,
-                columnNumber: 7
+                lineNumber: 95,
+                columnNumber: 5
             }, this),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("g", {
-                className: "room",
-                transform: `translate(${5175 + W1},0)`,
-                children: [
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(RectPath, {
-                        className: "room-floor",
-                        start: [
-                            0,
-                            0
-                        ],
-                        lens: [
-                            3655,
-                            3030,
-                            -3655,
-                            -3030, 
-                        ]
-                    }, void 0, false, {
-                        fileName: "src/app.tsx",
-                        lineNumber: 126,
-                        columnNumber: 9
-                    }, this),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(RectPath, {
-                        className: "room-wall",
-                        start: [
-                            0,
-                            0
-                        ],
-                        lens: [
-                            1008,
-                            -300,
-                            -1008 - W1,
-                            3330 + W1,
-                            450,
-                            -W1,
-                            -400,
-                            -3030, 
-                        ]
-                    }, void 0, false, {
-                        fileName: "src/app.tsx",
-                        lineNumber: 134,
-                        columnNumber: 9
-                    }, this),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(RectPath, {
-                        className: "room-wall",
-                        start: [
-                            1737,
-                            0
-                        ],
-                        lens: [
-                            170,
-                            -300,
-                            -170,
-                            300, 
-                        ]
-                    }, void 0, false, {
-                        fileName: "src/app.tsx",
-                        lineNumber: 144,
-                        columnNumber: 9
-                    }, this),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(RectPath, {
-                        className: "room-wall",
-                        start: [
-                            2925,
-                            0
-                        ],
-                        lens: [
-                            721,
-                            3030,
-                            -2427,
-                            W1,
-                            2427 + W1,
-                            -W1 - 3030 - 300,
-                            -W1 - 721,
-                            300, 
-                        ]
-                    }, void 0, false, {
-                        fileName: "src/app.tsx",
-                        lineNumber: 152,
-                        columnNumber: 9
-                    }, this),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(Place, {
-                        x: 3655,
-                        y: 1515,
-                        deg: 90,
-                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(Fredde, {}, void 0, false, {
-                            fileName: "src/app.tsx",
-                            lineNumber: 163,
-                            columnNumber: 11
-                        }, this)
-                    }, void 0, false, {
-                        fileName: "src/app.tsx",
-                        lineNumber: 162,
-                        columnNumber: 9
-                    }, this),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(Place, {
-                        x: 2441.5,
-                        y: 1515,
-                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(Markus, {}, void 0, false, {
-                            fileName: "src/app.tsx",
-                            lineNumber: 166,
-                            columnNumber: 11
-                        }, this)
-                    }, void 0, false, {
-                        fileName: "src/app.tsx",
-                        lineNumber: 165,
-                        columnNumber: 9
-                    }, this),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(Place, {
-                        x: 2441.5,
-                        y: 3030,
-                        deg: 180,
-                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(YandexTV50, {}, void 0, false, {
-                            fileName: "src/app.tsx",
-                            lineNumber: 169,
-                            columnNumber: 11
-                        }, this)
-                    }, void 0, false, {
-                        fileName: "src/app.tsx",
-                        lineNumber: 168,
-                        columnNumber: 9
-                    }, this),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(Place, {
-                        x: 1641.5,
-                        y: 2530,
-                        deg: 30,
-                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(Spkr30, {}, void 0, false, {
-                            fileName: "src/app.tsx",
-                            lineNumber: 172,
-                            columnNumber: 11
-                        }, this)
-                    }, void 0, false, {
-                        fileName: "src/app.tsx",
-                        lineNumber: 171,
-                        columnNumber: 9
-                    }, this),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(Place, {
-                        x: 3241.5,
-                        y: 2530,
-                        deg: -30,
-                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(Spkr30, {}, void 0, false, {
-                            fileName: "src/app.tsx",
-                            lineNumber: 175,
-                            columnNumber: 11
-                        }, this)
-                    }, void 0, false, {
-                        fileName: "src/app.tsx",
-                        lineNumber: 174,
-                        columnNumber: 9
-                    }, this)
-                ]
-            }, void 0, true, {
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("path", {
+                id: "ruler-diag",
+                className: "ruler",
+                d: `M${from.join(",")} L${to.join(",")}`
+            }, void 0, false, {
                 fileName: "src/app.tsx",
-                lineNumber: 125,
-                columnNumber: 7
+                lineNumber: 96,
+                columnNumber: 5
             }, this),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("g", {
-                className: "room",
-                transform: `translate(${5175 + W1 + 3655 + W1},0)`,
-                children: [
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(RectPath, {
-                        className: "room-floor",
-                        start: [
-                            160,
-                            0
-                        ],
-                        lens: [
-                            3325,
-                            6308,
-                            -3485,
-                            -4726,
-                            160,
-                            -1582, 
-                        ]
-                    }, void 0, false, {
-                        fileName: "src/app.tsx",
-                        lineNumber: 179,
-                        columnNumber: 9
-                    }, this),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(RectPath, {
-                        className: "room-wall",
-                        start: [
-                            160,
-                            0
-                        ],
-                        lens: [
-                            712,
-                            -300,
-                            -872 - W1,
-                            3330 + W1,
-                            W1,
-                            -(3030 - W1 - 1582),
-                            160,
-                            -1582, 
-                        ]
-                    }, void 0, false, {
-                        fileName: "src/app.tsx",
-                        lineNumber: 188,
-                        columnNumber: 9
-                    }, this),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(RectPath, {
-                        className: "room-wall",
-                        start: [
-                            2796,
-                            0
-                        ],
-                        lens: [
-                            698,
-                            6308,
-                            -3485,
-                            -1734,
-                            -W1,
-                            1734 + W1 + 620,
-                            W1,
-                            -620,
-                            3785,
-                            -W1 - 6308 - 300,
-                            -989,
-                            300, 
-                        ]
-                    }, void 0, false, {
-                        fileName: "src/app.tsx",
-                        lineNumber: 198,
-                        columnNumber: 9
-                    }, this)
-                ]
-            }, void 0, true, {
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(RulerText, {
+                href: "#ruler-diag",
+                d: d
+            }, void 0, false, {
                 fileName: "src/app.tsx",
-                lineNumber: 178,
-                columnNumber: 7
+                lineNumber: 97,
+                columnNumber: 5
             }, this),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("g", {
-                className: "room",
-                transform: `translate(0,${3626 + W1})`,
-                children: [
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(RectPath, {
-                        className: "room-floor",
-                        start: [
-                            0,
-                            0
-                        ],
-                        lens: [
-                            3610,
-                            3252,
-                            -1120,
-                            -160,
-                            -2490,
-                            -3092, 
-                        ]
-                    }, void 0, false, {
-                        fileName: "src/app.tsx",
-                        lineNumber: 212,
-                        columnNumber: 9
-                    }, this),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(RectPath, {
-                        className: "room-wall",
-                        start: [
-                            0,
-                            0
-                        ],
-                        lens: [
-                            3610,
-                            400,
-                            W1,
-                            -400 - W1,
-                            -W1 - 3610 - 300,
-                            752 + W1,
-                            300,
-                            -752, 
-                        ]
-                    }, void 0, false, {
-                        fileName: "src/app.tsx",
-                        lineNumber: 221,
-                        columnNumber: 9
-                    }, this),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(RectPath, {
-                        className: "room-wall",
-                        start: [
-                            -300,
-                            2680
-                        ],
-                        lens: [
-                            300,
-                            412,
-                            2490,
-                            160,
-                            1120,
-                            -2048,
-                            W1,
-                            2048 + W1,
-                            -W1 - 3610 - 300,
-                            -W1 - 160 - 412, 
-                        ]
-                    }, void 0, false, {
-                        fileName: "src/app.tsx",
-                        lineNumber: 231,
-                        columnNumber: 9
-                    }, this)
-                ]
-            }, void 0, true, {
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("path", {
+                id: "ruler-top",
+                className: "ruler-top",
+                d: `M${x0},${y0} L${x1},${y0}`
+            }, void 0, false, {
                 fileName: "src/app.tsx",
-                lineNumber: 211,
-                columnNumber: 7
+                lineNumber: 98,
+                columnNumber: 5
             }, this),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("g", {
-                className: "room",
-                transform: `translate(0,${3626 + W1 + 3252 + W1})`,
-                children: [
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(RectPath, {
-                        className: "room-floor",
-                        start: [
-                            0,
-                            0
-                        ],
-                        lens: [
-                            4736,
-                            1503 - W1,
-                            -344,
-                            1846 + W1,
-                            -4392,
-                            -3349, 
-                        ]
-                    }, void 0, false, {
-                        fileName: "src/app.tsx",
-                        lineNumber: 244,
-                        columnNumber: 9
-                    }, this),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(RectPath, {
-                        className: "room-wall",
-                        start: [
-                            0,
-                            0
-                        ],
-                        lens: [
-                            3786,
-                            -W1,
-                            -4086,
-                            714,
-                            300,
-                            -714, 
-                        ]
-                    }, void 0, false, {
-                        fileName: "src/app.tsx",
-                        lineNumber: 253,
-                        columnNumber: 9
-                    }, this),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(RectPath, {
-                        className: "room-wall",
-                        start: [
-                            4586,
-                            0
-                        ],
-                        lens: [
-                            150,
-                            600,
-                            W1,
-                            -600 - W1,
-                            -W1 - 150,
-                            W1, 
-                        ]
-                    }, void 0, false, {
-                        fileName: "src/app.tsx",
-                        lineNumber: 262,
-                        columnNumber: 9
-                    }, this),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(RectPath, {
-                        className: "room-wall",
-                        start: [
-                            -300,
-                            2647
-                        ],
-                        lens: [
-                            300,
-                            702,
-                            4392,
-                            -1846,
-                            -600,
-                            -W1,
-                            600 + W1 + 300,
-                            W1,
-                            -300,
-                            1846 + W1 + 300,
-                            -W1 - 4392 - 300,
-                            -1002, 
-                        ]
-                    }, void 0, false, {
-                        fileName: "src/app.tsx",
-                        lineNumber: 271,
-                        columnNumber: 9
-                    }, this),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(RectPath, {
-                        className: "room-wall",
-                        start: [
-                            -300,
-                            1737
-                        ],
-                        lens: [
-                            300,
-                            183,
-                            -300,
-                            -183, 
-                        ]
-                    }, void 0, false, {
-                        fileName: "src/app.tsx",
-                        lineNumber: 283,
-                        columnNumber: 9
-                    }, this)
-                ]
-            }, void 0, true, {
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("path", {
+                id: "ruler-bot",
+                className: "ruler-bot",
+                d: `M${x0},${y1} L${x1},${y1}`
+            }, void 0, false, {
                 fileName: "src/app.tsx",
-                lineNumber: 243,
-                columnNumber: 7
+                lineNumber: 99,
+                columnNumber: 5
             }, this),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("g", {
-                className: "room",
-                transform: `translate(${4736},${3626 + W1 + 3252 + W1})`,
-                children: [
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(RectPath, {
-                        className: "room-floor",
-                        start: [
-                            W1,
-                            0
-                        ],
-                        lens: [
-                            1620,
-                            -180,
-                            400,
-                            1340,
-                            -600,
-                            270,
-                            -1420 - W1,
-                            -830,
-                            W1,
-                            -600, 
-                        ]
-                    }, void 0, false, {
-                        fileName: "src/app.tsx",
-                        lineNumber: 293,
-                        columnNumber: 9
-                    }, this),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(RectPath, {
-                        className: "room-wall",
-                        start: [
-                            W1,
-                            0
-                        ],
-                        lens: [
-                            1620,
-                            -180,
-                            400,
-                            1340,
-                            -600,
-                            270,
-                            -645,
-                            W1,
-                            1245 + W1 + 200,
-                            -W1 - 270,
-                            -200,
-                            -1340 - W1,
-                            -1980,
-                            150,
-                            -345,
-                            W1,
-                            150,
-                            600,
-                            W1,
-                            -600, 
-                        ]
-                    }, void 0, false, {
-                        fileName: "src/app.tsx",
-                        lineNumber: 304,
-                        columnNumber: 9
-                    }, this)
-                ]
-            }, void 0, true, {
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("path", {
+                id: "ruler-right",
+                className: "ruler-top",
+                d: `M${x1},${y0} L${x1},${y1}`
+            }, void 0, false, {
                 fileName: "src/app.tsx",
-                lineNumber: 292,
-                columnNumber: 7
+                lineNumber: 100,
+                columnNumber: 5
             }, this),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(Place, {
-                className: "room",
-                x: 5175 + W1 + 3655 + W1,
-                y: 6308 + W1,
-                children: [
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(RectPath, {
-                        className: "room-floor",
-                        start: [
-                            0,
-                            0
-                        ],
-                        lens: [
-                            1570,
-                            1850,
-                            -1570 - W1,
-                            -1230,
-                            W1,
-                            -620, 
-                        ]
-                    }, void 0, false, {
-                        fileName: "src/app.tsx",
-                        lineNumber: 322,
-                        columnNumber: 9
-                    }, this),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(RectPath, {
-                        className: "room-wall",
-                        start: [
-                            1570,
-                            1210
-                        ],
-                        lens: [
-                            W1,
-                            940,
-                            -2480 - W1,
-                            -300,
-                            2480,
-                            -640, 
-                        ]
-                    }, void 0, false, {
-                        fileName: "src/app.tsx",
-                        lineNumber: 331,
-                        columnNumber: 9
-                    }, this),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(RectPath, {
-                        className: "room-wall",
-                        start: [
-                            1570,
-                            0
-                        ],
-                        lens: [
-                            W1,
-                            500,
-                            -W1,
-                            -500, 
-                        ]
-                    }, void 0, false, {
-                        fileName: "src/app.tsx",
-                        lineNumber: 340,
-                        columnNumber: 9
-                    }, this)
-                ]
-            }, void 0, true, {
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("path", {
+                id: "ruler-left",
+                className: "ruler-left",
+                d: `M${x0},${y0} L${x0},${y1}`
+            }, void 0, false, {
                 fileName: "src/app.tsx",
-                lineNumber: 321,
-                columnNumber: 7
+                lineNumber: 101,
+                columnNumber: 5
+            }, this),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(RulerText, {
+                href: "#ruler-top",
+                d: dx
+            }, void 0, false, {
+                fileName: "src/app.tsx",
+                lineNumber: 102,
+                columnNumber: 5
+            }, this),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(RulerText, {
+                href: "#ruler-right",
+                d: dy
+            }, void 0, false, {
+                fileName: "src/app.tsx",
+                lineNumber: 103,
+                columnNumber: 5
+            }, this),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("circle", {
+                cx: x1,
+                cy: y1,
+                r: 50
+            }, void 0, false, {
+                fileName: "src/app.tsx",
+                lineNumber: 104,
+                columnNumber: 5
             }, this)
         ]
     }, void 0, true, {
         fileName: "src/app.tsx",
-        lineNumber: 57,
-        columnNumber: 5
-    }, this);
-}
-_c6 = Apt;
-function App() {
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(Apt, {}, void 0, false, {
-        fileName: "src/app.tsx",
-        lineNumber: 354,
+        lineNumber: 94,
         columnNumber: 10
     }, this);
 }
-_c7 = App;
-var _c, _c1, _c2, _c3, _c4, _c5, _c6, _c7;
+_c8 = Ruler;
+function Apt() {
+    _s();
+    const [down, setDown] = (0, _react.useState)(null);
+    const [ruler, setRuler] = (0, _react.useState)(null);
+    const [svg, setSvg] = (0, _react.useState)(null);
+    const onDown = (0, _react.useCallback)((e)=>{
+        setDown([
+            e.clientX,
+            e.clientY
+        ]);
+        setRuler(null);
+    }, []);
+    const toSVGxy = (0, _react.useCallback)(([x, y])=>{
+        if (!svg) return [
+            0,
+            0
+        ];
+        const { left , top , width , height  } = svg.getBoundingClientRect();
+        return [
+            (x - left) / width * SB.width + SB.minx,
+            (y - top) / height * SB.height + SB.miny, 
+        ];
+    }, [
+        svg
+    ]);
+    (0, _react.useEffect)(()=>{
+        if (!down) return;
+        const up = ()=>{
+            setDown(null);
+        };
+        const move = (e)=>{
+            setRuler({
+                from: toSVGxy(down),
+                to: toSVGxy([
+                    e.clientX,
+                    e.clientY
+                ])
+            });
+        };
+        document.addEventListener("mousemove", move);
+        document.addEventListener("mouseup", up);
+        return ()=>{
+            document.removeEventListener("mousemove", move);
+            document.removeEventListener("mouseup", up);
+        };
+    }, [
+        down,
+        toSVGxy
+    ]);
+    (0, _react.useEffect)(()=>{
+        console.log(ruler?.from, ruler?.to);
+    }, [
+        ruler
+    ]);
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        className: "plan",
+        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("svg", {
+            version: "1.1",
+            baseProfile: "full",
+            viewBox: `${SB.minx} ${SB.miny} ${SB.width} ${SB.height}`,
+            xmlns: "http://www.w3.org/2000/svg",
+            onClick: (e)=>console.log(e),
+            onMouseDown: onDown,
+            ref: setSvg,
+            children: [
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(Place, {
+                    className: "room",
+                    children: [
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(RectPath, {
+                            className: "room-floor",
+                            start: [
+                                0,
+                                268
+                            ],
+                            lens: [
+                                1840,
+                                -268,
+                                3180,
+                                1531,
+                                155,
+                                1500,
+                                -1573,
+                                596,
+                                -3614,
+                                -3358, 
+                            ]
+                        }, void 0, false, {
+                            fileName: "src/app.tsx",
+                            lineNumber: 160,
+                            columnNumber: 9
+                        }, this),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(RectPath, {
+                            className: "room-wall",
+                            start: [
+                                0,
+                                268
+                            ],
+                            lens: [
+                                1840,
+                                -268,
+                                840,
+                                -300,
+                                -2980,
+                                1161,
+                                300,
+                                593, 
+                            ]
+                        }, void 0, false, {
+                            fileName: "src/app.tsx",
+                            lineNumber: 171,
+                            columnNumber: 9
+                        }, this),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(RectPath, {
+                            className: "room-wall",
+                            start: [
+                                4603,
+                                -300
+                            ],
+                            lens: [
+                                572 + W1,
+                                3331,
+                                -W1,
+                                -1500,
+                                -155,
+                                -1531,
+                                -417,
+                                -300, 
+                            ]
+                        }, void 0, false, {
+                            fileName: "src/app.tsx",
+                            lineNumber: 181,
+                            columnNumber: 9
+                        }, this),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(RectPath, {
+                            className: "room-wall",
+                            start: [
+                                5175,
+                                3030
+                            ],
+                            lens: [
+                                W1,
+                                W1,
+                                -W1 - 319,
+                                -W1,
+                                319,
+                                0, 
+                            ]
+                        }, void 0, false, {
+                            fileName: "src/app.tsx",
+                            lineNumber: 191,
+                            columnNumber: 9
+                        }, this),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(RectPath, {
+                            className: "room-wall",
+                            start: [
+                                -300,
+                                2784
+                            ],
+                            lens: [
+                                300,
+                                842,
+                                3610,
+                                -596,
+                                450,
+                                W1,
+                                -450 + W1,
+                                596,
+                                -W1 - 3610 - 300,
+                                -842, 
+                            ]
+                        }, void 0, false, {
+                            fileName: "src/app.tsx",
+                            lineNumber: 200,
+                            columnNumber: 9
+                        }, this),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(RectPath, {
+                            className: "room-wall",
+                            start: [
+                                -300,
+                                1885
+                            ],
+                            lens: [
+                                300,
+                                176,
+                                -300,
+                                -176, 
+                            ]
+                        }, void 0, false, {
+                            fileName: "src/app.tsx",
+                            lineNumber: 211,
+                            columnNumber: 9
+                        }, this)
+                    ]
+                }, "living", true, {
+                    fileName: "src/app.tsx",
+                    lineNumber: 159,
+                    columnNumber: 7
+                }, this),
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(Place, {
+                    className: "room",
+                    x: 5175 + W1,
+                    children: [
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(RectPath, {
+                            className: "room-floor",
+                            start: [
+                                0,
+                                0
+                            ],
+                            lens: [
+                                3655,
+                                3030,
+                                -3655,
+                                -3030, 
+                            ]
+                        }, void 0, false, {
+                            fileName: "src/app.tsx",
+                            lineNumber: 221,
+                            columnNumber: 9
+                        }, this),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(RectPath, {
+                            className: "room-wall",
+                            start: [
+                                0,
+                                0
+                            ],
+                            lens: [
+                                1008,
+                                -300,
+                                -1008 - W1,
+                                3330 + W1,
+                                450,
+                                -W1,
+                                -400,
+                                -3030, 
+                            ]
+                        }, void 0, false, {
+                            fileName: "src/app.tsx",
+                            lineNumber: 229,
+                            columnNumber: 9
+                        }, this),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(RectPath, {
+                            className: "room-wall",
+                            start: [
+                                1737,
+                                0
+                            ],
+                            lens: [
+                                170,
+                                -300,
+                                -170,
+                                300, 
+                            ]
+                        }, void 0, false, {
+                            fileName: "src/app.tsx",
+                            lineNumber: 239,
+                            columnNumber: 9
+                        }, this),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(RectPath, {
+                            className: "room-wall",
+                            start: [
+                                2925,
+                                0
+                            ],
+                            lens: [
+                                721,
+                                3030,
+                                -2427,
+                                W1,
+                                2427 + W1,
+                                -W1 - 3030 - 300,
+                                -W1 - 721,
+                                300, 
+                            ]
+                        }, void 0, false, {
+                            fileName: "src/app.tsx",
+                            lineNumber: 247,
+                            columnNumber: 9
+                        }, this),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(Place, {
+                            x: 3655,
+                            y: 1515,
+                            deg: 90,
+                            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(Fredde, {}, void 0, false, {
+                                fileName: "src/app.tsx",
+                                lineNumber: 258,
+                                columnNumber: 11
+                            }, this)
+                        }, void 0, false, {
+                            fileName: "src/app.tsx",
+                            lineNumber: 257,
+                            columnNumber: 9
+                        }, this),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(Place, {
+                            x: 2441.5,
+                            y: 1515,
+                            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(Markus, {}, void 0, false, {
+                                fileName: "src/app.tsx",
+                                lineNumber: 261,
+                                columnNumber: 11
+                            }, this)
+                        }, void 0, false, {
+                            fileName: "src/app.tsx",
+                            lineNumber: 260,
+                            columnNumber: 9
+                        }, this),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(Place, {
+                            x: 2441.5,
+                            y: 3030,
+                            deg: 180,
+                            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(YandexTV50, {}, void 0, false, {
+                                fileName: "src/app.tsx",
+                                lineNumber: 264,
+                                columnNumber: 11
+                            }, this)
+                        }, void 0, false, {
+                            fileName: "src/app.tsx",
+                            lineNumber: 263,
+                            columnNumber: 9
+                        }, this),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(Place, {
+                            x: 1641.5,
+                            y: 2530,
+                            deg: 30,
+                            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(Spkr30, {}, void 0, false, {
+                                fileName: "src/app.tsx",
+                                lineNumber: 267,
+                                columnNumber: 11
+                            }, this)
+                        }, void 0, false, {
+                            fileName: "src/app.tsx",
+                            lineNumber: 266,
+                            columnNumber: 9
+                        }, this),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(Place, {
+                            x: 3241.5,
+                            y: 2530,
+                            deg: -30,
+                            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(Spkr30, {}, void 0, false, {
+                                fileName: "src/app.tsx",
+                                lineNumber: 270,
+                                columnNumber: 11
+                            }, this)
+                        }, void 0, false, {
+                            fileName: "src/app.tsx",
+                            lineNumber: 269,
+                            columnNumber: 9
+                        }, this)
+                    ]
+                }, "study", true, {
+                    fileName: "src/app.tsx",
+                    lineNumber: 220,
+                    columnNumber: 7
+                }, this),
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(Place, {
+                    className: "room",
+                    x: 5175 + W1 + 3655 + W1,
+                    children: [
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(RectPath, {
+                            className: "room-floor",
+                            start: [
+                                160,
+                                0
+                            ],
+                            lens: [
+                                3325,
+                                6308,
+                                -3485,
+                                -4726,
+                                160,
+                                -1582, 
+                            ]
+                        }, void 0, false, {
+                            fileName: "src/app.tsx",
+                            lineNumber: 275,
+                            columnNumber: 9
+                        }, this),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(RectPath, {
+                            className: "room-wall",
+                            start: [
+                                160,
+                                0
+                            ],
+                            lens: [
+                                712,
+                                -300,
+                                -872 - W1,
+                                3330 + W1,
+                                W1,
+                                -(3030 - W1 - 1582),
+                                160,
+                                -1582, 
+                            ]
+                        }, void 0, false, {
+                            fileName: "src/app.tsx",
+                            lineNumber: 284,
+                            columnNumber: 9
+                        }, this),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(RectPath, {
+                            className: "room-wall",
+                            start: [
+                                2796,
+                                0
+                            ],
+                            lens: [
+                                698,
+                                6308,
+                                -3485,
+                                -1734,
+                                -W1,
+                                1734 + W1 + 620,
+                                W1,
+                                -620,
+                                3785,
+                                -W1 - 6308 - 300,
+                                -989,
+                                300, 
+                            ]
+                        }, void 0, false, {
+                            fileName: "src/app.tsx",
+                            lineNumber: 294,
+                            columnNumber: 9
+                        }, this)
+                    ]
+                }, "kitchen", true, {
+                    fileName: "src/app.tsx",
+                    lineNumber: 274,
+                    columnNumber: 7
+                }, this),
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(Place, {
+                    className: "room",
+                    y: 3626 + W1,
+                    children: [
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(RectPath, {
+                            className: "room-floor",
+                            start: [
+                                0,
+                                0
+                            ],
+                            lens: [
+                                3610,
+                                3252,
+                                -1120,
+                                -160,
+                                -2490,
+                                -3092, 
+                            ]
+                        }, void 0, false, {
+                            fileName: "src/app.tsx",
+                            lineNumber: 309,
+                            columnNumber: 9
+                        }, this),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(RectPath, {
+                            className: "room-wall",
+                            start: [
+                                0,
+                                0
+                            ],
+                            lens: [
+                                3610,
+                                400,
+                                W1,
+                                -400 - W1,
+                                -W1 - 3610 - 300,
+                                752 + W1,
+                                300,
+                                -752, 
+                            ]
+                        }, void 0, false, {
+                            fileName: "src/app.tsx",
+                            lineNumber: 318,
+                            columnNumber: 9
+                        }, this),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(RectPath, {
+                            className: "room-wall",
+                            start: [
+                                -300,
+                                2680
+                            ],
+                            lens: [
+                                300,
+                                412,
+                                2490,
+                                160,
+                                1120,
+                                -2048,
+                                W1,
+                                2048 + W1,
+                                -W1 - 3610 - 300,
+                                -W1 - 160 - 412, 
+                            ]
+                        }, void 0, false, {
+                            fileName: "src/app.tsx",
+                            lineNumber: 328,
+                            columnNumber: 9
+                        }, this)
+                    ]
+                }, "children", true, {
+                    fileName: "src/app.tsx",
+                    lineNumber: 308,
+                    columnNumber: 7
+                }, this),
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(Place, {
+                    className: "room",
+                    y: 3626 + W1 + 3252 + W1,
+                    children: [
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(RectPath, {
+                            className: "room-floor",
+                            start: [
+                                0,
+                                0
+                            ],
+                            lens: [
+                                4736,
+                                1503 - W1,
+                                -344,
+                                1846 + W1,
+                                -4392,
+                                -3349, 
+                            ]
+                        }, void 0, false, {
+                            fileName: "src/app.tsx",
+                            lineNumber: 342,
+                            columnNumber: 9
+                        }, this),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(RectPath, {
+                            className: "room-wall",
+                            start: [
+                                0,
+                                0
+                            ],
+                            lens: [
+                                3786,
+                                -W1,
+                                -4086,
+                                714,
+                                300,
+                                -714, 
+                            ]
+                        }, void 0, false, {
+                            fileName: "src/app.tsx",
+                            lineNumber: 351,
+                            columnNumber: 9
+                        }, this),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(RectPath, {
+                            className: "room-wall",
+                            start: [
+                                4586,
+                                0
+                            ],
+                            lens: [
+                                150,
+                                600,
+                                W1,
+                                -600 - W1,
+                                -W1 - 150,
+                                W1, 
+                            ]
+                        }, void 0, false, {
+                            fileName: "src/app.tsx",
+                            lineNumber: 360,
+                            columnNumber: 9
+                        }, this),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(RectPath, {
+                            className: "room-wall",
+                            start: [
+                                -300,
+                                2647
+                            ],
+                            lens: [
+                                300,
+                                702,
+                                4392,
+                                -1846,
+                                -600,
+                                -W1,
+                                600 + W1 + 300,
+                                W1,
+                                -300,
+                                1846 + W1 + 300,
+                                -W1 - 4392 - 300,
+                                -1002, 
+                            ]
+                        }, void 0, false, {
+                            fileName: "src/app.tsx",
+                            lineNumber: 369,
+                            columnNumber: 9
+                        }, this),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(RectPath, {
+                            className: "room-wall",
+                            start: [
+                                -300,
+                                1737
+                            ],
+                            lens: [
+                                300,
+                                183,
+                                -300,
+                                -183, 
+                            ]
+                        }, void 0, false, {
+                            fileName: "src/app.tsx",
+                            lineNumber: 381,
+                            columnNumber: 9
+                        }, this),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(Place, {
+                            x: 1893,
+                            y: 0,
+                            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(QBed, {}, void 0, false, {
+                                fileName: "src/app.tsx",
+                                lineNumber: 390,
+                                columnNumber: 11
+                            }, this)
+                        }, void 0, false, {
+                            fileName: "src/app.tsx",
+                            lineNumber: 389,
+                            columnNumber: 9
+                        }, this)
+                    ]
+                }, "bedroom", true, {
+                    fileName: "src/app.tsx",
+                    lineNumber: 341,
+                    columnNumber: 7
+                }, this),
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(Place, {
+                    className: "room",
+                    x: 4736,
+                    y: 3626 + W1 + 3252 + W1,
+                    children: [
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(RectPath, {
+                            className: "room-floor",
+                            start: [
+                                W1,
+                                0
+                            ],
+                            lens: [
+                                1620,
+                                -180,
+                                400,
+                                1340,
+                                -600,
+                                270,
+                                -1420 - W1,
+                                -830,
+                                W1,
+                                -600, 
+                            ]
+                        }, void 0, false, {
+                            fileName: "src/app.tsx",
+                            lineNumber: 395,
+                            columnNumber: 9
+                        }, this),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(RectPath, {
+                            className: "room-wall",
+                            start: [
+                                W1,
+                                0
+                            ],
+                            lens: [
+                                1620,
+                                -180,
+                                400,
+                                1340,
+                                -600,
+                                270,
+                                -645,
+                                W1,
+                                1245 + W1 + 200,
+                                -W1 - 270,
+                                -200,
+                                -1340 - W1,
+                                -1980,
+                                150,
+                                -345,
+                                W1,
+                                150,
+                                600,
+                                W1,
+                                -600, 
+                            ]
+                        }, void 0, false, {
+                            fileName: "src/app.tsx",
+                            lineNumber: 406,
+                            columnNumber: 9
+                        }, this)
+                    ]
+                }, "bedroom-closet", true, {
+                    fileName: "src/app.tsx",
+                    lineNumber: 394,
+                    columnNumber: 7
+                }, this),
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(Place, {
+                    className: "room",
+                    x: 5175 + W1 + 3655 + W1,
+                    y: 6308 + W1,
+                    children: [
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(RectPath, {
+                            className: "room-floor",
+                            start: [
+                                0,
+                                0
+                            ],
+                            lens: [
+                                1570,
+                                1850,
+                                -1570 - W1,
+                                -1230,
+                                W1,
+                                -620, 
+                            ]
+                        }, void 0, false, {
+                            fileName: "src/app.tsx",
+                            lineNumber: 425,
+                            columnNumber: 9
+                        }, this),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(RectPath, {
+                            className: "room-wall",
+                            start: [
+                                1570,
+                                1210
+                            ],
+                            lens: [
+                                W1,
+                                940,
+                                -2480 - W1,
+                                -300,
+                                2480,
+                                -640, 
+                            ]
+                        }, void 0, false, {
+                            fileName: "src/app.tsx",
+                            lineNumber: 434,
+                            columnNumber: 9
+                        }, this),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(RectPath, {
+                            className: "room-wall",
+                            start: [
+                                1570,
+                                0
+                            ],
+                            lens: [
+                                W1,
+                                500,
+                                -W1,
+                                -500, 
+                            ]
+                        }, void 0, false, {
+                            fileName: "src/app.tsx",
+                            lineNumber: 443,
+                            columnNumber: 9
+                        }, this)
+                    ]
+                }, "entrance-closet", true, {
+                    fileName: "src/app.tsx",
+                    lineNumber: 424,
+                    columnNumber: 7
+                }, this),
+                ruler && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(Ruler, {
+                    ...ruler
+                }, void 0, false, {
+                    fileName: "src/app.tsx",
+                    lineNumber: 453,
+                    columnNumber: 17
+                }, this)
+            ]
+        }, void 0, true, {
+            fileName: "src/app.tsx",
+            lineNumber: 150,
+            columnNumber: 5
+        }, this)
+    }, void 0, false, {
+        fileName: "src/app.tsx",
+        lineNumber: 149,
+        columnNumber: 5
+    }, this);
+}
+_s(Apt, "B19ZHTEtxX1cNL4MvMV1wi+pZGc=");
+_c9 = Apt;
+function App() {
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(Apt, {}, void 0, false, {
+        fileName: "src/app.tsx",
+        lineNumber: 460,
+        columnNumber: 10
+    }, this);
+}
+_c10 = App;
+var _c, _c1, _c2, _c3, _c4, _c5, _c6, _c7, _c8, _c9, _c10;
 $RefreshReg$(_c, "RectPath");
 $RefreshReg$(_c1, "Place");
 $RefreshReg$(_c2, "Fredde");
 $RefreshReg$(_c3, "Spkr30");
 $RefreshReg$(_c4, "Markus");
 $RefreshReg$(_c5, "YandexTV50");
-$RefreshReg$(_c6, "Apt");
-$RefreshReg$(_c7, "App");
+$RefreshReg$(_c6, "QBed");
+$RefreshReg$(_c7, "RulerText");
+$RefreshReg$(_c8, "Ruler");
+$RefreshReg$(_c9, "Apt");
+$RefreshReg$(_c10, "App");
 
   $parcel$ReactRefreshHelpers$13a7.postlude(module);
 } finally {
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"gkKU3":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"gkKU3":[function(require,module,exports) {
 exports.interopDefault = function(a) {
     return a && a.__esModule ? a : {
         default: a
