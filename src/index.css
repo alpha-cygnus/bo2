@@ -1,0 +1,17 @@
+.plan {
+  width: 100wh;
+  height: 100wh;
+}
+.room-floor {
+  stroke: none;
+  fill: #EEE;
+}
+.room-wall {
+  stroke: none;
+  fill: #444;
+}
+.markus {
+  fill: #222;
+  stroke: #CCC;
+  stroke-width: 100;
+}
